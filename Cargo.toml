@@ -1,0 +1,9 @@
+[package]
+name = "myapp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.5.0-rc.1" #这个是稳定版本的，开发版本参考官网

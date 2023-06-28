@@ -1,0 +1,25 @@
+## 覆盖所有模式的值
+[global]
+
+## 为所有模式提供默认值
+[default]
+address = "0.0.0.0"
+port= 8000
+limits = { forms = "64 kB", json = "1 MiB" }
+
+## set only when compiled in debug mode, i.e, `cargo build`
+[debug]
+port = 8000
+## only the `json` key from `default` will be overridden; `forms` will remain
+limits = { json = "10MiB" }
+
+## set only when the `nyc` profile is selected
+[nyc]
+port = 8000
+
+## set only when compiled in release mode, i.e, `cargo build --release`
+## don't use this secret_key! generate your own and keep it private!
+[release]
+port = 8000
+secret_key = "hPRYyVRiMyxpw5sBB1XeCMN1kFsDCqKvBi2QJxBVHQk="
+
